@@ -46,8 +46,8 @@
 
         $.extend(this, options);
 
-        this.setNodeColors = function($box) {
-            if (this.backgroundColor) $box.css('background-color', this.backgroundColor($box));
+        this.setNodeColors = function(node, $box) {
+            if (this.backgroundColor) $box.css('background-color', this.backgroundColor(node, $box));
             if (this.color) $box.css('color', this.color($box));
         }
     }
@@ -67,7 +67,7 @@
                 'position' : 'absolute'
             }));
 
-            this.setNodeColors($box);
+            this.setNodeColors(node, $box);
 
             $box.addClass('treemap-node');
 
