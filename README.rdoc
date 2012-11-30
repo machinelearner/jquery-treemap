@@ -26,9 +26,10 @@ You can pass a second parameter containing some options to customize the looking
     $('div#someId).treemap(
         [],
         {
-            backgroundColor: function(node){
+            backgroundColor: function(node,box){
                 //node is an item of the list passed as the first arg of this fuction;
-                return 'red'; // You should return a css valid color string.
+                //box is the dom element which represents a particular node
+                return 'red'; // You should return a css valid color string. can be a hex value or the string representing colour
             },
             color: function(node){
                 //node is an item of the list passed as the first arg of this fuction;
